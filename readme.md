@@ -1,5 +1,7 @@
 # Travel Demand Modeling Network Management Platform
 
+<img src="https://github.com/Ohio-DOT/Travel-Demand-Modeling-Network-Management-Platform/blob/main/docs/img/net_mgt.png" alt="Screenshot of the Platform's Main Page" style="max-height: 803px;">
+
 A web-based platform for managing, editing, and visualizing transportation networks used in travel demand modeling. Built with **Django** and **React**, this tool streamlines the process of maintaining network data.
 
 ## 🚀 Features
