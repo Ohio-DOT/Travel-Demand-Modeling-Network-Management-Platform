@@ -1,0 +1,11 @@
+.basemap-selector {
+    position: absolute;
+    z-index: 999;
+}
+
+.basemap-selector select{
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 8px;
+    padding: 8px;
+    font-size:12px;
+}
