@@ -119,7 +119,7 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
-USE_SRID = config('USE_SRID')
+USE_SRID = config('USE_SRID', cast=int)
 
 # Static files
 STATIC_URL = "static/"

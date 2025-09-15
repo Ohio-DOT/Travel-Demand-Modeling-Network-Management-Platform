@@ -850,17 +850,17 @@ class MVTNetworkTileView(APIView):
         # Simplification tolerance
         tolerance = get_simplification_tolerance(int(z))
         geom_sql = (
-            f"ST_Transform(ST_SimplifyPreserveTopology(geometry, {tolerance}), {SRID})"
+            f"ST_Transform(ST_SimplifyPreserveTopology(geometry, {tolerance}), 3857)"
             if tolerance > 0 else
-            "ST_Transform(geometry, {SRID})"
+            "ST_Transform(geometry, 3857)"
         )
 
         sql = f"""
         WITH tile_bounds AS (
-            SELECT ST_TileEnvelope({z}, {x}, {y}) AS tile_SRID
+            SELECT ST_TileEnvelope({z}, {x}, {y}) AS tile_3857
         ),
         geom_SRID_bounds AS (
-            SELECT ST_Transform(tile_SRID, {SRID}) AS bounds_SRID FROM tile_bounds
+            SELECT ST_Transform(tile_3857, {SRID}) AS bounds_SRID FROM tile_bounds
         ),
         latest_links AS (
             SELECT DISTINCT ON (link_id) *
@@ -885,7 +885,7 @@ class MVTNetworkTileView(APIView):
         mvt_links AS (
             SELECT ST_AsMVTGeom(
                 {geom_sql},
-                (SELECT tile_SRID FROM tile_bounds),
+                (SELECT tile_3857 FROM tile_bounds),
                 4096, 256, true
             ) AS geom,
             {link_cols}
@@ -894,7 +894,7 @@ class MVTNetworkTileView(APIView):
         mvt_nodes AS (
             SELECT ST_AsMVTGeom(
                 {geom_sql.replace("geometry", "nv.geometry")},
-                (SELECT tile_SRID FROM tile_bounds),
+                (SELECT tile_3857 FROM tile_bounds),
                 4096, 256, true
             ) AS geom,
             {node_cols}

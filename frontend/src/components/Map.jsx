@@ -154,7 +154,7 @@ const Map = () => {
         source: "combined_network",
         "source-layer": "links",
         paint: {
-          "line-color": "#008",
+          "line-color": "#000088",
           "line-width": [
             "interpolate",
             ["linear"],
