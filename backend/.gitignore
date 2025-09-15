@@ -1,0 +1,27 @@
+# Django-specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+local_settings.py
+media/ # If media files are stored locally and not intended for version control
+
+# Virtual Environments
+.env
+venv/
+env/
+.venv/
+
+# IDE-specific files (e.g., PyCharm, VS Code)
+.idea/
+.vscode/
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
+
+# Other common files to ignore
+.coverage
+.tox/
+.eggs/
