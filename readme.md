@@ -14,7 +14,7 @@ A web-based platform for managing, editing, and visualizing transportation netwo
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Leaflet.js, Redux Toolkit, Tailwind CSS
+- **Frontend**: React, Tailwind CSS
 - **Backend**: Django, Django REST Framework, PostgreSQL + PostGIS
 
 ## 📦 Installation
