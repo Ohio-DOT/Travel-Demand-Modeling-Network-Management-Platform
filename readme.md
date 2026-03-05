@@ -1,6 +1,6 @@
 # 🚦 Travel Demand Modeling Network Management Platform
 
-<img width="4021" height="2268" src="https://github.com/Ohio-DOT/Travel-Demand-Modeling-Network-Management-Platform/blob/main/docs/img/net_mgt.png?raw=True" alt="Screenshot of the Platform's Main Page">
+<img width="4021" height="2268" src="https://raw.githubusercontent.com/Ohio-DOT/Travel-Demand-Modeling-Network-Management-Platform/refs/heads/main/docs/img/net_mgt.png" alt="Screenshot of the Platform's Main Page">
   
 **A modern web platform that streamlines how highway networks are maintained for MPO and state-level travel demand modeling.**
 
